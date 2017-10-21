@@ -1,4 +1,4 @@
-ps cax | grep apache2
+ps cax | grep apachsdadse2
 echo "$?"
 if [ $? -eq 0 ]; then
  echo "Process is running."
