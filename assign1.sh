@@ -22,6 +22,7 @@ sed '12!d' inputs;
 sed '13!d' inputs;
  )|
 fdisk  $dname;
+partprobe $dname;
 pvcreate $dname$num $dname$num2;  
 vgcreate $vgname  $dname$num $dname$num2;
 lvcreate -L $sizeofLV1 -n $lv1 $vgname ;
