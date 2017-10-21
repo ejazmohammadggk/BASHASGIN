@@ -3,12 +3,11 @@ gname=$(sed '3!d' inputs2);
 (
 sed '2!d' inputs2;
 sed '2!d' inputs2;
-echo;
-echo;
-echo;
-echo;
-echo;
-echo;
+yes;
+yes;
+yes;
+yes;
+yes;
 echo y;
 )|adduser $uname;
 groupadd $gname
