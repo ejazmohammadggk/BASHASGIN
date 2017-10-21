@@ -8,6 +8,7 @@ echo;
 echo;
 echo;
 echo;
+echo;
 echo y;
 )|adduser $uname;
 groupadd $gname
