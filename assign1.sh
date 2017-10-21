@@ -4,7 +4,7 @@ num2=$(sed '9!d' inputs);
 vgname=$(sed '14!d' inputs);
 sizeofLV1=$(sed '15!d' inputs);
 lv1=$(sed '16!d' inputs);
-sizeofLV1=$(sed '17!d' inputs);
+sizeofLV2=$(sed '17!d' inputs);
 lv2=$(sed '18!d' inputs);
 mpoint=$(sed '19!d' inputs);
 (
