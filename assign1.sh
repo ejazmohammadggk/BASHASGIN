@@ -2,6 +2,10 @@ dname=sed '1dd!d' inputs;
 num=sed '4!d' inputs;
 num2=sed '9!d' inputs;
 vgname=sed '13!d' inputs;
+sizeofLV1=sed '14!d' inputs;
+lv1=sed '15!d' inputs;
+sizeofLV1=sed '16!d' inputs;
+lv2=sed '17!d' inputs;
 (
 sed '2!d' inputs;
 sed '3!d' inputs;
@@ -16,7 +20,7 @@ sed '11!d' inputs;
 sed '12!d' inputs;
  )|
 fdisk  $dname;
-pvcreate $dname$num $dname$num2;
+pvcreate $dname$num $dname$num2;  
 vgcreate $vgname  $dname$num $dname$num2;
-lvcreate 
-
+lvcreate -L $sizeofLV1 -n $lv1 $vgname ;
+lvcreate -L $sizeofLV2 -n $lv2 $vgname ;
