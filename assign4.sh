@@ -1,4 +1,4 @@
-if [ "$#" -eq 2 -a -d "$1" ];
+if [ "$#" -eq 2 ];
 then
 	if [ -d "$1" ];then
 		echo ‘error’
@@ -9,4 +9,6 @@ fi
             	mkdir "$2"
             	cp -r "$1"/* "$2"
     	fi
+else 
+	echo 'error no paramenters'
 fi
