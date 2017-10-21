@@ -9,9 +9,7 @@ echo;
 echo;
 echo;
 echo;
-echo y
-)
-|
-adduser $uname;
+echo y;
+)|adduser $uname;
 groupadd $gname
 usermod -aG sudo $uname
