@@ -1,6 +1,5 @@
-
-$uname=$(sed '1!d' inputs2);
-$gname=$(sed '3!d' inputs2);
+uname=$(sed '1!d' inputs2);
+gname=$(sed '3!d' inputs2);
 (
 sed '2!d' inputs2;
 sed '2!d' inputs2;
