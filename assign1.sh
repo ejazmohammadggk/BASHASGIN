@@ -19,6 +19,7 @@ sed '9!d' inputs;
 sed '10!d' inputs;
 sed '11!d' inputs;
 sed '12!d' inputs;
+sed '13!d' inputs;
  )|
 fdisk  $dname;
 pvcreate $dname$num $dname$num2;  
