@@ -1,6 +1,11 @@
-pid=$(pid apache2);
-if [ "$pid" -gt 0 ]; then
- echo "Process is running."
-else
- echo "Process is not running."
+if ! pidof apache2 > /dev/null
+then
+    /etc/init.d/apache2 restart > /dev/null
+    if pidof apache2 > /dev/null
+    then
+        echo "server started"
+    else
+       apt-get update
+       apt-get install apache2
+    fi
 fi
