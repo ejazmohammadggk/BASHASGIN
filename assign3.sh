@@ -8,4 +8,7 @@ then
        apt-get update
        apt-get install apache2
     fi
+else
+    echo "server is up"
 fi
+
