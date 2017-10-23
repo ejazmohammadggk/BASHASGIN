@@ -1,4 +1,4 @@
-3dname=$(sed '1!d' inputs);
+dname=$(sed '1!d' inputs);
 num=$(sed '4!d' inputs);
 num2=$(sed '9!d' inputs);
 vgname=$(sed '14!d' inputs);
