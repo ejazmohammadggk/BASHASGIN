@@ -1,4 +1,4 @@
-dname=$(sed '1!d' inputs);
+3dname=$(sed '1!d' inputs);
 num=$(sed '4!d' inputs);
 num2=$(sed '9!d' inputs);
 vgname=$(sed '14!d' inputs);
@@ -29,5 +29,5 @@ lvcreate -L $sizeofLV1 -n $lv1 $vgname ;
 lvcreate -L $sizeofLV2 -n $lv2 $vgname ;
 mkfs.ext3 /dev/$vgname/$lv1;
 mkfs.ext3 /dev/$vgname/$lv2;
-(echo /dev/$vgname/$lv1 $mpoint ext4 defaults 0 0 )|cat >> /etc/fstab;
+(echo /dev/$vgname/$lv1 $mpoint ext3 defaults 0 0 )|cat >> /etc/fstab;
 mount -a;
