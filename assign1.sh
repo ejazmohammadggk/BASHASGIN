@@ -1,3 +1,4 @@
+
 dname=$(sed '1!d' inputs);
 num=$(sed '4!d' inputs);
 num2=$(sed '9!d' inputs);
@@ -18,6 +19,12 @@ sed '8!d' inputs;
 sed '9!d' inputs;
 sed '10!d' inputs;
 sed '11!d' inputs;
+echo t;
+sed '4!d' inputs;
+echo 8e;
+echo t;
+sed '9!d' inputs;
+echo 8e;
 sed '12!d' inputs;
 sed '13!d' inputs;
  )|
